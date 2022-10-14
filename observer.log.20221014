@@ -3039,3 +3039,25 @@ ThreadPools=SQLThreads,IOThreads,D
 [2022-10-14 16:47:26 pid:59437 tid:ffffb081e010  INFO: metrics_registry.cpp register_metric 37]>>Successfully register metric :SessionStage.writesocket
 [2022-10-14 16:47:26 pid:59437 tid:ffffb081e010  ERROR: server.cpp start_tcp_server 323]>>bind(): can not bind server socket, Address already in use
 [2022-10-14 16:47:26 pid:59437 tid:ffffb081e010  PANIC: server.cpp serve 424]>>Failed to start network
+[2022-10-14 17:2:47 pid:92903 tid:ffff893971c0  INFO: log_reporter.cpp report 36]>>DefaultStorageStage.query:mean:0,tps:0
+[2022-10-14 17:2:47 pid:92903 tid:ffff893971c0  INFO: log_reporter.cpp report 36]>>SessionStage.readsocket:mean:0,tps:6.46621e-05
+[2022-10-14 17:2:47 pid:92903 tid:ffff893971c0  INFO: log_reporter.cpp report 36]>>SessionStage.sql:mean:0,tps:0
+[2022-10-14 17:2:47 pid:92903 tid:ffff893971c0  INFO: log_reporter.cpp report 36]>>SessionStage.writesocket:mean:0,tps:0
+[2022-10-14 17:2:47 pid:92903 tid:ffff82ffd1c0  INFO: main.cpp quit_thread_func 137]>>Receive signal: 1
+[2022-10-14 17:2:47 pid:92903 tid:ffff82ffd1c0  INFO: server.cpp shutdown 448]>>Server shutting down
+[2022-10-14 17:2:47 pid:92903 tid:ffff8fd21010  INFO: server.cpp serve 442]>>Server quit
+[2022-10-14 17:2:47 pid:92903 tid:ffff8fd21010  INFO: main.cpp main 167]>>Server stopped
+[2022-10-14 17:2:47 pid:92903 tid:ffff8fd21010  INFO: table.cpp sync 870]>>Sync table over. table=a
+[2022-10-14 17:2:47 pid:92903 tid:ffff8fd21010  INFO: db.cpp sync 145]>>Successfully sync table db:sys, table:a.
+[2022-10-14 17:2:47 pid:92903 tid:ffff8fd21010  INFO: table.cpp sync 870]>>Sync table over. table=t
+[2022-10-14 17:2:47 pid:92903 tid:ffff8fd21010  INFO: db.cpp sync 145]>>Successfully sync table db:sys, table:t.
+[2022-10-14 17:2:47 pid:92903 tid:ffff8fd21010  INFO: db.cpp sync 147]>>Successfully sync db. db=sys
+[2022-10-14 17:2:47 pid:92903 tid:ffff8fd21010  INFO: disk_buffer_pool.cpp close_file 199]>>Successfully close file 11:./miniob/db/sys/a.data.
+[2022-10-14 17:2:47 pid:92903 tid:ffff8fd21010  INFO: disk_buffer_pool.cpp ~DiskBufferPool 136]>>Exit
+[2022-10-14 17:2:47 pid:92903 tid:ffff8fd21010  INFO: table.cpp ~Table 50]>>Table has been closed: a
+[2022-10-14 17:2:47 pid:92903 tid:ffff8fd21010  INFO: disk_buffer_pool.cpp close_file 199]>>Successfully close file 4:./miniob/db/sys/t.data.
+[2022-10-14 17:2:47 pid:92903 tid:ffff8fd21010  INFO: disk_buffer_pool.cpp ~DiskBufferPool 136]>>Exit
+[2022-10-14 17:2:47 pid:92903 tid:ffff8fd21010  INFO: table.cpp ~Table 50]>>Table has been closed: t
+[2022-10-14 17:2:47 pid:92903 tid:ffff8fd21010  INFO: db.cpp ~Db 33]>>Db has been closed: sys
+[2022-10-14 17:2:47 pid:92903 tid:ffff8fd21010  INFO: mem_pool.h cleanup 270]>>Successfully do cleanup, this->name:BufPool.
+[2022-10-14 17:2:47 pid:92903 tid:ffff8fd21010  INFO: init.cpp cleanup_util 274]>>Shutdown Cleanly!
