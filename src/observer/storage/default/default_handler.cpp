@@ -81,7 +81,6 @@ RC DefaultHandler::create_db(const char *dbname)
     LOG_WARN("Invalid db name");
     return RC::INVALID_ARGUMENT;
   }
-
   // 如果对应名录已经存在，返回错误
   std::string dbpath = db_dir_ + dbname;
   if (common::is_directory(dbpath.c_str())) {
@@ -147,10 +146,14 @@ RC DefaultHandler::create_table(
   return db->create_table(relation_name, attribute_count, attributes);
 }
 
-RC DefaultHandler::drop_table(const char *dbname, const char *relation_name)
-{
-  return RC::GENERIC_ERROR;
+RC DefaultHandler::drop_table(const char *dbname, const char *relation_name) {
+  Db *db = find_db(dbname);  // 这是原有的代码，用来查找对应的数据库，不过目前只有一个库
+  if(db == nullptr) {
+    return RC::SCHEMA_DB_NOT_OPENED;
+  }
+  return db->drop_table(relation_name); // 直接调用db的删掉接口
 }
+
 
 RC DefaultHandler::create_index(
     Trx *trx, const char *dbname, const char *relation_name, const char *index_name, const char *attribute_name)
